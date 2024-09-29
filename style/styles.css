@@ -1,0 +1,96 @@
+/* inter */
+
+.inter-4{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+.inter-7{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+.inter-8{
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+  }
+.inter-9{
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+  }
+
+  /*  // <uniquifier>: Use a unique and descriptive class name */
+/* // 400: Use a value from 200 to 1000 */
+/*  mulish */
+.mulish-400 {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} 
+.mulish-4{
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+}
+.mulish-5 {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffffcc;
+} 
+.mulish-7{
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+}
+.mulish-8{
+  font-family: "Mulish", sans-serif;
+  font-weight: 800;
+}
+.mulish-9{
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+}
+
+
+
+/* styels */
+
+
+.retro{
+    background: linear-gradient(90deg, #797DFC 0.63%, rgba(121, 125, 252, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Mulish;
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 86px;
+}
+
+/* .pr-clr{
+    color: #0307121a;
+    color: #03071280;
+    color: #ffffffcc;
+    color: #12132d99;
+    color:  #12132d26;
+    color: #12132d99;
+    color: #12132d99;
+    color: #12132db3;
+} */
+
+.fobg{
+  background: linear-gradient(180deg, rgba(18, 19, 45, 0.05) 0%, rgba(18, 19, 45, 0.00) 100%);
+}
+.aside-s{
+  border-radius: 24px;
+  background: rgba(18, 19, 45, 0.05);
+}
+.all-post{
+  border-radius: 24px;
+  border: 1px solid #797DFC;
+  background: rgba(121, 125, 252, 0.10);
+}
+.latest-post{
+  border-radius: 24px;
+  border: 1px solid rgba(18, 19, 45, 0.15);
+  background: #FFF;
+}

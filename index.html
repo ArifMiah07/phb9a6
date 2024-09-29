@@ -1,11 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>b9a6</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Forum</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style/styles.css" />
+    <!-- daisy-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/427ebcbb1a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <style></style>
+  </head>
+  <body>
+    <header class="mx-auto mb-4 lg:w-[1170px] lg:mb-12">
+      <!-- nav section -->
+      <nav>
+        <div class="">
+          <div
+            class="rounded-[16px] navbar flex flex-col lg:flex lg:flex-row justify-between bg-gray-100"
+          >
+            <div class="mb-3 lg:mb-0">
+              <!-- logo -->
+              <div class="navbar-center">
+                <a
+                  class="btn btn-ghost text-3xl font-bold lg:text-4xl lg:font-black text-[#12132D] mulish-9"
+                  >ReTro Forum</a
+                >
+              </div>
+            </div>
+            <div class="flex justify-between gap-8 lg:gap-6">
+              <div>
+                <button
+                  class="btn btn-ghost btn-circle border border-[#0307121a]"
+                >
+                  <div class="tooltip" data-tip="Home">
+                    <i class="fa-solid fa-house"></i>
+                  </div>
+                </button>
+                <button
+                  class="btn btn-ghost btn-circle border border-[#0307121a]"
+                >
+                  <div class="tooltip" data-tip="tooltip">
+                    <i class="fa-solid fa-pen"></i>
+                  </div>
+                </button>
+                <button
+                  class="btn btn-ghost btn-circle border border-[#0307121a]"
+                >
+                  <div class="tooltip" data-tip="tooltip">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </div>
+                </button>
+                <button
+                  class="btn btn-ghost btn-circle border border-[#0307121a]"
+                >
+                  <div class="tooltip" data-tip="tooltip">
+                    <i class="fa-solid fa-flag"></i>
+                  </div>
+                </button>
+              </div>
+              <button id="" class="btn rounded-[50px] bg-[#797DFC] px-8 text-white text-lg mulish-700 text-center">
+                Sign In
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- banner section -->
+      <section>
+        <div class="mt-1">
+          <div
+            class="p-4 flex flex-col items-center gap-12 bg-[#12132D] rounded-[32px] min-h-screen lg:gap-12 lg:flex lg:flex-row lg:justify-between lg:p-24"
+            style="
+              background-image: url(./images/bgbanner.png);
+              width: 100%;
+              background-repeat: no-repeat;
+              height: 100%;
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <!-- text and title -->
+            <div class="">
+              <div class="my-6 ">
+                <h1
+                  class="text-white font-black text-[48px] lg:text-[64px] text-center lg:text-left mulish-9"
+                >
+                  Welcome to the <br />
+                  <span class="retro">ReTro</span> Forum
+                </h1>
+                <p class="mulish-5 m-y-8  text-center lg:text-left">
+                    Welcome to the ReTro Forum, where nostalgia meets modern <br> discussion.  Join us for fun, memories, and lively conversations. Enjoy your stay!
+                </p>
+              </div>
+              <div class="flex bg-white rounded-[50px] py-2 justify-between">
+                <input id="search-field" class="outline-none rounded-[50px] text-[#03071280] text-[20px] px-[18px] bg-white" type="text" placeholder="Search here anything">
+                <button onclick="handleSearch()" class="btn p-2 px-[27px] text-white bg-[#797DFC] mulish-7 text-[20px] font-medium rounded-full mr-3" >
+                  Search
+                </button>
+              </div>
+            </div>
+            <!--  -->
+            <div class="flex flex-col rounded-3xl p-12 gap-3 bg-white h-fit">
+              <div class="flex justify-between gap-12">
+                <h1>Registered Users</h1>
+                <p>1</p>
+              </div>
+              <div class="flex justify-between gap-12">
+                <h1>Forum</h1>
+                <p>5</p>
+              </div>
+              <div class="flex justify-between gap-12">
+                <h1>Topics</h1>
+                <p>1</p>
+              </div>
+              <div class="flex justify-between gap-12">
+                <h1>Replies</h1>
+                <p>1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+        <!-- loading section -->
+        <section class="flex justify-center">
+            <!-- loading spinner -->
+            <div id="loading-spinner" class="hidden">
+                
+                <span class="loading loading-spinner loading-md"></span>
+                
+              </div>
+              
+        </section>
+      <!-- Let’s Discuss section -->
+      <section id="lets-discuss" class="mx-auto mb-4 lg:w-[1170px] lg:mb-12">
+        <!-- text and title -->
+        <div class="flex flex-col items-center justify-center mb-6">
+          <h1 class="text-[48px] mulish-9 text-center">Let’s Discuss</h1>
+          <p class="text-[#03071280] text-center">
+            Welcome to on our retro forum! Dive into nostalgic conversations,
+            share your <br />favorite retro moments, and connect with fellow
+            enthusiasts in this vibrant community of like-minded individuals.
+          </p>
+        </div>
+        <!-- container div -->
+        <div class="flex flex-col lg:flex lg:flex-row lg:justify-between gap-6">
+          <!-- contents container -->
+          <section>
+            <!-- conetnt -->
+            <div id="post-container" class="flex flex-col gap-6">
+              <!-- all post -->
+            </div>
+          </section>
+          <!-- aside -->
+          <aside class="">
+            <!-- text and title -->
+            <div id="mark-as-read-container" class="flex flex-col aside-s p-6 h-fit">
+              <div class="flex justify-between mb-3">
+                <h1>Title</h1>
+                <p>
+                  <i class="fa-solid fa-check-double text-green-600"></i> Mark
+                  as read (<span id="mark_as_read" class="">0</span>)
+                </p>
+              </div>
+              <div id="mark-as-read-div" class="flex justify-between gap-4 p-4 mb-5 bg-white rounded-2xl">
+                <div>
+                  Add Your Readed Post Here!
+                </div>
+                <div><3</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- Join Our Forum section -->
+      <section class="mx-auto mb-4 lg:w-[1170px] lg:mb-12">
+        <!--  -->
+        <div
+          class="flex flex-col lg:flex lg:flex-row p-8 bg-[#12132D] lg:justify-between rounded-[36px]"
+        >
+          <!-- text and title and btn -->
+          <div>
+            <h1 class="mb-4 text-[40px] mulish-9 text-white">Join Our Forum</h1>
+            <p class="mb-6 mulish-4 text-[18px] text-[#ffffffcc]">
+              Share your favorite opinion and win and wp forum coffee mug! Yes,
+              you can <br />
+              run unit tests and view the results directly within the app.
+            </p>
+            <button
+              class="btn text-[20px] mulish-7 rounded-[50px] px-6 py-3 bg-[#797DFC] text-[#fff]"
+            >
+              Registered Now
+            </button>
+          </div>
+          <!-- aside img -->
+          <div>
+            <img src="./images/joinforum.png" class="w-fit h-fit" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- Latest Posts section -->
+      <section class="mx-auto mb-4 lg:w-[1170px] lg:mb-12">
+        <!-- text-title -->
+        <div class="flex flex-col items-center justify-center text-center">
+          <h1 class="mb-7 mulish-9 text-[40px] text-[#12132D]">Latest Posts</h1>
+          <p class="mb-7 inter-4 text-[#12132d99] text-[18px]">
+            Yes, you can run unit tests and view the results directly within the
+            app. The <br />
+            integrated testing features allow for a streamlined .
+          </p>
+        </div>
+        <!--Latest Post contents -->
+        <div
+          id="latest-post-container"
+          class="flex flex-col lg:flex lg:flex-row gap-3"
+        ></div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer footer-center p-10 fobg">
+      <div class="border-b-2 border-gray-100 w-9/12">
+        <div>
+          <h1 class="mulish-9 text-[36px] text-[#12132D] mb-4">ReTro Forum</h1>
+          <p class="mulish-4 text-[#12132db3] mb-4">
+            ReTro Forum: Where nostalgia meets modernity. Join our vibrant
+            community for <br />
+            discussions, memories, and timeless connections.
+          </p>
+        </div>
+        <div class="mb-6">
+          <div class="flex flex-row gap-5 justify-center items-center">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+      <p>Copyright © 2024 - All right reserved</p>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./js/index.js"></script>
+    <script>
+
+    </script>
+  </body>
 </html>
